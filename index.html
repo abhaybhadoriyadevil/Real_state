@@ -51,6 +51,44 @@
         body {
             min-height: 100dvh;
         }
+
+        /* Better background image handling for all screens */
+        .hero-bg {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        @media (max-width: 768px) {
+            .hero-bg {
+                background-attachment: scroll;
+            }
+        }
+
+        /* Optimize images for larger screens */
+        .project-card-bg {
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card-bg:hover {
+            transform: scale(1.05);
+        }
+
+        /* Desktop navigation enhancement */
+        @media (min-width: 1024px) {
+            .desktop-nav {
+                display: flex;
+                gap: 2rem;
+                align-items: center;
+            }
+
+            .mobile-only {
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -61,34 +99,45 @@
 
         <!-- Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
-            <div class="h-full w-full bg-cover bg-center"
+            <div class="h-full w-full hero-bg"
                 style='background-image: linear-gradient(to bottom, rgba(26, 26, 26, 0.7) 0%, rgba(33, 29, 17, 0.4) 40%, rgba(33, 29, 17, 0.9) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBE_AZx6qlk-abSVj_EhN7bSyU1Vkv7u0wIhi9OJXH7R61VHTuUlkkvvY6psSC9Z9LOC2CH2J6uJ6hB3auVT10X9bNkR8OXIsX6qJ_z9BWr2Y1IFAQcsfRT2qzX86Mttgt2CaoEVtpfgZ18YTLE71ocVxZ0IIpAsUrExtvCs8XscKUyCI5j2o7AymLyo-qqVXLoyod5YT86s73PgiSlYYW2L7m-Pu8BrEgkY-B0QHBzoZWUZ32dWH3MVGbXW0t4ZmDFfHERHJWrHiCe");'>
             </div>
         </div>
 
         <!-- Navigation Bar -->
-        <header class="relative z-20 flex items-center justify-between px-6 pt-16 pb-4 bg-transparent">
+        <header
+            class="relative z-20 flex items-center justify-between px-6 lg:px-12 pt-16 pb-4 bg-transparent max-w-7xl mx-auto w-full">
             <div class="flex items-center gap-2">
-                <div class="bg-primary size-8 rounded-full flex items-center justify-center">
-                    <span class="material-symbols-outlined text-background-dark text-xl font-bold">architecture</span>
+                <div class="bg-primary size-8 lg:size-10 rounded-full flex items-center justify-center">
+                    <span
+                        class="material-symbols-outlined text-background-dark text-xl lg:text-2xl font-bold">architecture</span>
                 </div>
-                <span class="text-lg font-black tracking-tighter uppercase">Apex</span>
+                <span class="text-lg lg:text-xl font-black tracking-tighter uppercase">Apex</span>
             </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex desktop-nav text-white">
+                <a href="index.html" class="hover:text-primary transition-colors font-semibold">Home</a>
+                <a href="expertise.html" class="hover:text-primary transition-colors font-semibold">Expertise</a>
+                <a href="projects.html" class="hover:text-primary transition-colors font-semibold">Projects</a>
+                <a href="contact.html" class="hover:text-primary transition-colors font-semibold">Contact</a>
+            </nav>
 
             <div class="flex items-center gap-4">
                 <button
-                    class="flex items-center justify-center size-10 rounded-full bg-white/10 backdrop-blur-md hover:bg-white/20 transition-colors">
+                    class="flex items-center justify-center size-10 lg:size-12 rounded-full bg-white/10 backdrop-blur-md hover:bg-white/20 transition-colors">
                     <span class="material-symbols-outlined text-white">call</span>
                 </button>
-                <button class="flex items-center justify-center size-10" id="menuBtn">
+                <button class="flex lg:hidden items-center justify-center size-10" id="menuBtn">
                     <span class="material-symbols-outlined text-white text-3xl">menu</span>
                 </button>
             </div>
         </header>
 
         <!-- Hero Content Section -->
-        <div class="relative z-10 flex flex-1 flex-col items-center justify-end px-6 pb-20 text-center @container">
-            <div class="max-w-[480px] flex flex-col gap-6">
+        <div
+            class="relative z-10 flex flex-1 flex-col items-center justify-end px-6 lg:px-12 pb-20 text-center @container">
+            <div class="max-w-[480px] lg:max-w-4xl flex flex-col gap-6 lg:gap-8">
 
                 <!-- Section Badge -->
                 <div class="flex justify-center">
@@ -100,12 +149,13 @@
 
                 <!-- Headline -->
                 <h1
-                    class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-6xl drop-shadow-lg">
+                    class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-6xl lg:text-7xl drop-shadow-lg">
                     Building Iconic Spaces for Dubai's Future
                 </h1>
 
                 <!-- Sub-headline -->
-                <p class="text-white/80 text-base font-normal leading-relaxed @[480px]:text-lg max-w-sm mx-auto">
+                <p
+                    class="text-white/80 text-base font-normal leading-relaxed @[480px]:text-lg lg:text-xl max-w-sm lg:max-w-2xl mx-auto">
                     Exquisite craftsmanship meets visionary architecture in the heart of the Emirates.
                 </p>
 
@@ -137,7 +187,7 @@
             Featured Developments</h4>
 
         <!-- Projects Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 p-4 max-w-6xl mx-auto w-full">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 p-4 lg:p-8 max-w-7xl mx-auto w-full">
             <div class="bg-cover bg-center flex flex-col gap-3 rounded-xl justify-end p-4 aspect-[3/4] relative overflow-hidden group shadow-lg cursor-pointer"
                 style='background-image: linear-gradient(0deg, rgba(26, 26, 26, 0.9) 0%, rgba(26, 26, 26, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCzbWk1gSizeoakTs_c34wLornQCWEFGRFrOWZEG0KCmyITaOnJGqwyPNEtdsqH6NvXQsVDxADaz6kx5QeWBwegvzh0QVpuFzGiaIM5fUy8dczy8VumrPHQ5FGCMBD17JTegkwshbB9lll4vpXLfqkdXADXbHwxi1O_-HeG1NiBZ0JyCQdnE1eMjaKPoft1hd8WFxbvdhB_frASlp9vnuVM0iscF0oiPCj4YPCCatOFCssceEQ_lSbQxUoOfSRyrfmdEYddrxd0UVmV");'>
                 <p class="text-white text-sm font-bold leading-tight line-clamp-2">Palm Jumeirah Estate</p>

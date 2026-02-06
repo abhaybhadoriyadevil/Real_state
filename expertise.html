@@ -46,45 +46,60 @@
 <body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white">
     <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
 
-        <!-- Top App Bar -->
+        <!-- Top App Bar / Navigation -->
         <div
-            class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-50 border-b border-primary/10">
-            <div class="text-slate-900 dark:text-white flex size-12 shrink-0 items-center">
-                <a href="index.html">
-                    <span class="material-symbols-outlined text-2xl">arrow_back</span>
-                </a>
-            </div>
-            <h2
-                class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">
-                Expertise</h2>
-            <div class="flex w-12 items-center justify-end">
-                <button
-                    class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-slate-900 dark:text-white gap-2 text-base font-bold leading-normal min-w-0 p-0">
-                    <span class="material-symbols-outlined text-2xl">search</span>
-                </button>
-            </div>
-        </div>
+            class="sticky top-0 z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-primary/10 px-6 lg:px-12">
+            <div class="flex items-center p-4 pb-2 justify-between max-w-7xl mx-auto w-full">
+                <div class="flex items-center gap-2">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <div class="bg-primary size-8 lg:size-10 rounded-full flex items-center justify-center">
+                            <span
+                                class="material-symbols-outlined text-background-dark text-xl lg:text-2xl font-bold">architecture</span>
+                        </div>
+                        <span
+                            class="text-lg lg:text-xl font-black tracking-tighter uppercase text-slate-900 dark:text-white">Apex</span>
+                    </a>
+                </div>
 
-        <!-- Hero Section -->
-        <div class="px-4 py-3">
-            <div class="bg-cover bg-center flex flex-col justify-end overflow-hidden bg-background-dark rounded-xl min-h-[400px] border border-primary/20 shadow-2xl"
-                style='background-image: linear-gradient(0deg, rgba(24, 22, 17, 0.9) 0%, rgba(24, 22, 17, 0.2) 50%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBZdyYSnE1yNMxvQq51xc3f8RiqHsyG86dwcgyGTq4ND_3k65yDCOzxvNXTqBmWV1V3UQz1GjF2iF_pa7AQEk2FkUlr3jCnCGvsG0USsVaKVo2CGQnIZ9NP8gzMRqmFXCzg1qn1ntHk9NTxt48umbxBw0Ab01NsOYL4AK6_ZLgtqhGq948iU4YhgOVzrd7ZdbECQJYGQ_vnAHKyu8_anXAYUHg4QpEuyCJb243QRmaJvlWz1ggY3L4ih_GLKUCpqNaLZmmg1gzTw9Fb");'>
-                <div class="flex flex-col p-6 gap-2">
-                    <span class="text-primary text-sm font-bold uppercase tracking-[0.2em]">Established 1989</span>
-                    <p class="text-white tracking-tight text-[42px] font-bold leading-[1.1]">Legacy &amp; Expertise</p>
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex gap-8 text-slate-600 dark:text-slate-300">
+                    <a href="index.html" class="hover:text-primary transition-colors font-semibold">Home</a>
+                    <a href="expertise.html" class="text-primary font-bold">Expertise</a>
+                    <a href="projects.html" class="hover:text-primary transition-colors font-semibold">Projects</a>
+                    <a href="contact.html" class="hover:text-primary transition-colors font-semibold">Contact</a>
+                </nav>
+
+                <div class="flex items-center gap-4">
+                    <button
+                        class="flex items-center justify-center size-10 lg:size-12 rounded-full bg-slate-200/50 dark:bg-white/10 backdrop-blur-md hover:bg-slate-200 dark:hover:bg-white/20 transition-colors">
+                        <span class="material-symbols-outlined text-slate-900 dark:text-white">search</span>
+                    </button>
+                    <button class="flex lg:hidden items-center justify-center size-10" id="menuBtn">
+                        <span class="material-symbols-outlined text-slate-900 dark:text-white text-3xl">menu</span>
+                    </button>
                 </div>
             </div>
         </div>
 
-        <!-- Headline -->
-        <div class="px-4 pt-8 pb-2">
-            <h2 class="text-slate-900 dark:text-white tracking-tight text-[28px] font-bold leading-tight text-left">
-                Building Excellence in Dubai</h2>
+        <!-- Hero Section -->
+        <div class="px-4 py-3 max-w-7xl mx-auto w-full">
+            <div class="bg-cover bg-center flex flex-col justify-end overflow-hidden bg-background-dark rounded-xl min-h-[400px] lg:min-h-[500px] border border-primary/20 shadow-2xl"
+                style='background-image: linear-gradient(0deg, rgba(24, 22, 17, 0.9) 0%, rgba(24, 22, 17, 0.2) 50%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBZdyYSnE1yNMxvQq51xc3f8RiqHsyG86dwcgyGTq4ND_3k65yDCOzxvNXTqBmWV1V3UQz1GjF2iF_pa7AQEk2FkUlr3jCnCGvsG0USsVaKVo2CGQnIZ9NP8gzMRqmFXCzg1qn1ntHk9NTxt48umbxBw0Ab01NsOYL4AK6_ZLgtqhGq948iU4YhgOVzrd7ZdbECQJYGQ_vnAHKyu8_anXAYUHg4QpEuyCJb243QRmaJvlWz1ggY3L4ih_GLKUCpqNaLZmmg1gzTw9Fb");'>
+                <div class="flex flex-col p-6 lg:p-12 gap-2">
+                    <span class="text-primary text-sm lg:text-base font-bold uppercase tracking-[0.2em]">Established
+                        1989</span>
+                    <p class="text-white tracking-tight text-[42px] lg:text-[64px] font-bold leading-[1.1]">Legacy &amp;
+                        Expertise</p>
+                </div>
+            </div>
         </div>
 
-        <!-- Description -->
-        <div class="px-4 pb-6 pt-1">
-            <p class="text-slate-600 dark:text-slate-300 text-base font-normal leading-relaxed max-w-prose">
+        <!-- Headline & Description -->
+        <div class="max-w-7xl mx-auto w-full px-4 pt-8 lg:pt-16 pb-6">
+            <h2
+                class="text-slate-900 dark:text-white tracking-tight text-[28px] lg:text-[42px] font-bold leading-tight text-left mb-4">
+                Building Excellence in Dubai</h2>
+            <p class="text-slate-600 dark:text-slate-300 text-base lg:text-lg font-normal leading-relaxed max-w-prose">
                 A legacy of architectural brilliance and elite standards in every detail. We transform Dubai's skyline
                 with a commitment to precision, luxury, and sustainable innovation.
             </p>
@@ -99,7 +114,8 @@
         </div>
 
         <!-- Services Grid -->
-        <div class="grid grid-cols-1 gap-4 px-4 pb-10">
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8 px-4 lg:px-12 pb-10 max-w-7xl mx-auto w-full">
 
             <!-- Service Card 1 -->
             <div

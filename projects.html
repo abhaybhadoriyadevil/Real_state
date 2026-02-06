@@ -58,57 +58,77 @@
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white transition-colors duration-300">
     <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden pb-24">
 
-        <!-- Top App Bar -->
+        <!-- Top App Bar / Navigation -->
         <div
-            class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
-            <div class="flex items-center p-4 pb-2 justify-between">
-                <div class="flex size-12 shrink-0 items-center justify-start">
-                    <a href="index.html">
-                        <span class="material-symbols-outlined text-2xl">arrow_back</span>
+            class="sticky top-0 z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-primary/10 px-6 lg:px-12">
+            <div class="flex items-center p-4 pb-2 justify-between max-w-7xl mx-auto w-full">
+                <div class="flex items-center gap-2">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <div class="bg-primary size-8 lg:size-10 rounded-full flex items-center justify-center">
+                            <span
+                                class="material-symbols-outlined text-background-dark text-xl lg:text-2xl font-bold">architecture</span>
+                        </div>
+                        <span
+                            class="text-lg lg:text-xl font-black tracking-tighter uppercase text-slate-900 dark:text-white">Apex</span>
                     </a>
                 </div>
-                <h2
-                    class="text-slate-900 dark:text-white text-sm font-extrabold leading-tight tracking-[0.2em] flex-1 text-center uppercase">
-                    Signature Projects</h2>
-                <div class="flex w-12 items-center justify-end">
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex gap-8 text-slate-600 dark:text-slate-300">
+                    <a href="index.html" class="hover:text-primary transition-colors font-semibold">Home</a>
+                    <a href="expertise.html" class="hover:text-primary transition-colors font-semibold">Expertise</a>
+                    <a href="projects.html" class="text-primary font-bold">Projects</a>
+                    <a href="contact.html" class="hover:text-primary transition-colors font-semibold">Contact</a>
+                </nav>
+
+                <div class="flex items-center gap-4">
                     <button
-                        class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent gap-2 text-base font-bold leading-normal min-w-0 p-0">
-                        <span class="material-symbols-outlined text-2xl">search</span>
+                        class="flex items-center justify-center size-10 lg:size-12 rounded-full bg-slate-200/50 dark:bg-white/10 backdrop-blur-md hover:bg-slate-200 dark:hover:bg-white/20 transition-colors">
+                        <span class="material-symbols-outlined text-slate-900 dark:text-white">search</span>
+                    </button>
+                    <button class="flex lg:hidden items-center justify-center size-10" id="menuBtn">
+                        <span class="material-symbols-outlined text-slate-900 dark:text-white text-3xl">menu</span>
                     </button>
                 </div>
             </div>
         </div>
 
         <!-- Filter Chips -->
-        <div class="flex gap-3 px-4 py-4 overflow-x-auto hide-scrollbar">
-            <div
-                class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-6 cursor-pointer filter-btn active">
-                <p class="text-white text-xs font-bold uppercase tracking-wider">All Projects</p>
-            </div>
-            <div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full border border-slate-200 dark:border-slate-800 bg-transparent px-6 cursor-pointer filter-btn"
-                data-category="skyscrapers">
-                <p class="text-slate-600 dark:text-slate-400 text-xs font-bold uppercase tracking-wider">Skyscrapers</p>
-            </div>
-            <div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full border border-slate-200 dark:border-slate-800 bg-transparent px-6 cursor-pointer filter-btn"
-                data-category="villas">
-                <p class="text-slate-600 dark:text-slate-400 text-xs font-bold uppercase tracking-wider">Luxury Villas
-                </p>
-            </div>
-            <div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full border border-slate-200 dark:border-slate-800 bg-transparent px-6 cursor-pointer filter-btn"
-                data-category="penthouses">
-                <p class="text-slate-600 dark:text-slate-400 text-xs font-bold uppercase tracking-wider">Penthouses</p>
+        <div class="max-w-7xl mx-auto w-full px-4 py-4 lg:py-8 lg:px-12">
+            <div class="flex gap-3 overflow-x-auto hide-scrollbar lg:justify-center">
+                <div
+                    class="flex h-10 lg:h-12 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-6 lg:px-8 cursor-pointer filter-btn active">
+                    <p class="text-white text-xs lg:text-sm font-bold uppercase tracking-wider">All Projects</p>
+                </div>
+                <div class="flex h-10 lg:h-12 shrink-0 items-center justify-center gap-x-2 rounded-full border border-slate-200 dark:border-slate-800 bg-transparent px-6 lg:px-8 cursor-pointer filter-btn"
+                    data-category="skyscrapers">
+                    <p class="text-slate-600 dark:text-slate-400 text-xs lg:text-sm font-bold uppercase tracking-wider">
+                        Skyscrapers</p>
+                </div>
+                <div class="flex h-10 lg:h-12 shrink-0 items-center justify-center gap-x-2 rounded-full border border-slate-200 dark:border-slate-800 bg-transparent px-6 lg:px-8 cursor-pointer filter-btn"
+                    data-category="villas">
+                    <p class="text-slate-600 dark:text-slate-400 text-xs lg:text-sm font-bold uppercase tracking-wider">
+                        Luxury Villas
+                    </p>
+                </div>
+                <div class="flex h-10 lg:h-12 shrink-0 items-center justify-center gap-x-2 rounded-full border border-slate-200 dark:border-slate-800 bg-transparent px-6 lg:px-8 cursor-pointer filter-btn"
+                    data-category="penthouses">
+                    <p class="text-slate-600 dark:text-slate-400 text-xs lg:text-sm font-bold uppercase tracking-wider">
+                        Penthouses</p>
+                </div>
             </div>
         </div>
 
         <!-- Section Header -->
-        <div class="px-4 py-2">
-            <h4 class="text-primary text-[10px] font-black leading-normal tracking-[0.25em] uppercase">Featured
+        <div class="max-w-7xl mx-auto w-full px-4 lg:px-12 py-2">
+            <h4 class="text-primary text-[10px] lg:text-xs font-black leading-normal tracking-[0.25em] uppercase">
+                Featured
                 Portfolios</h4>
-            <div class="h-[1px] w-8 bg-primary mt-1"></div>
+            <div class="h-[1px] w-8 lg:w-12 bg-primary mt-1"></div>
         </div>
 
         <!-- Main Project Feed -->
-        <div class="flex flex-col gap-6 p-4">
+        <div class="max-w-7xl mx-auto w-full p-4 lg:p-12 flex flex-col gap-6 lg:gap-12">
 
             <!-- Featured Large Card -->
             <div class="relative group overflow-hidden rounded-xl aspect-[4/5] bg-slate-200 dark:bg-slate-800 cursor-pointer project-card"

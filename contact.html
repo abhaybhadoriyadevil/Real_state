@@ -41,149 +41,177 @@
 <body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white">
     <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden pb-24">
 
-        <!-- Top App Bar -->
+        <!-- Top App Bar / Navigation -->
         <div
-            class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
-            <div class="flex items-center p-4 pb-2 justify-between">
-                <div class="flex size-12 shrink-0 items-center justify-start">
-                    <a href="index.html">
-                        <span class="material-symbols-outlined text-2xl">arrow_back</span>
+            class="sticky top-0 z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-primary/10 px-6 lg:px-12">
+            <div class="flex items-center p-4 pb-2 justify-between max-w-7xl mx-auto w-full">
+                <div class="flex items-center gap-2">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <div class="bg-primary size-8 lg:size-10 rounded-full flex items-center justify-center">
+                            <span
+                                class="material-symbols-outlined text-background-dark text-xl lg:text-2xl font-bold">architecture</span>
+                        </div>
+                        <span
+                            class="text-lg lg:text-xl font-black tracking-tighter uppercase text-slate-900 dark:text-white">Apex</span>
                     </a>
                 </div>
-                <h2
-                    class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">
-                    Contact</h2>
-                <div class="flex w-12"></div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex gap-8 text-slate-600 dark:text-slate-300">
+                    <a href="index.html" class="hover:text-primary transition-colors font-semibold">Home</a>
+                    <a href="expertise.html" class="hover:text-primary transition-colors font-semibold">Expertise</a>
+                    <a href="projects.html" class="hover:text-primary transition-colors font-semibold">Projects</a>
+                    <a href="contact.html" class="text-primary font-bold">Contact</a>
+                </nav>
+
+                <div class="flex items-center gap-4">
+                    <button
+                        class="flex items-center justify-center size-10 lg:size-12 rounded-full bg-slate-200/50 dark:bg-white/10 backdrop-blur-md hover:bg-slate-200 dark:hover:bg-white/20 transition-colors">
+                        <span class="material-symbols-outlined text-slate-900 dark:text-white">search</span>
+                    </button>
+                    <button class="flex lg:hidden items-center justify-center size-10" id="menuBtn">
+                        <span class="material-symbols-outlined text-slate-900 dark:text-white text-3xl">menu</span>
+                    </button>
+                </div>
             </div>
         </div>
 
         <!-- Hero Image -->
-        <div class="px-4 py-4">
-            <div class="bg-cover bg-center rounded-xl min-h-[250px] flex items-end p-6 border border-primary/20"
+        <div class="px-4 py-4 max-w-7xl mx-auto w-full">
+            <div class="bg-cover bg-center rounded-xl min-h-[250px] lg:min-h-[400px] flex items-end p-6 lg:p-12 border border-primary/20"
                 style='background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(24,22,17,0.9)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBE_AZx6qlk-abSVj_EhN7bSyU1Vkv7u0wIhi9OJXH7R61VHTuUlkkvvY6psSC9Z9LOC2CH2J6uJ6hB3auVT10X9bNkR8OXIsX6qJ_z9BWr2Y1IFAQcsfRT2qzX86Mttgt2CaoEVtpfgZ18YTLE71ocVxZ0IIpAsUrExtvCs8XscKUyCI5j2o7AymLyo-qqVXLoyod5YT86s73PgiSlYYW2L7m-Pu8BrEgkY-B0QHBzoZWUZ32dWH3MVGbXW0t4ZmDFfHERHJWrHiCe");'>
-                <h1 class="text-white text-3xl font-black">Get In Touch</h1>
+                <h1 class="text-white text-3xl lg:text-5xl font-black">Get In Touch</h1>
             </div>
         </div>
 
-        <!-- Contact Info Section -->
-        <div class="px-4 py-4">
-            <h3 class="text-slate-900 dark:text-white text-xl font-bold mb-4">Connect With Our Team</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
-                Whether you're looking to invest, design, or simply explore possibilities, our team is ready to bring
-                your vision to life.
-            </p>
+        <!-- Main Content Area -->
+        <div class="max-w-7xl mx-auto w-full px-4 py-8 lg:py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
 
-            <!-- Contact Details Cards -->
-            <div class="flex flex-col gap-3">
-                <div
-                    class="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-background-dark border border-slate-200 dark:border-primary/10">
-                    <div class="bg-primary/10 p-3 rounded-lg text-primary shrink-0">
-                        <span class="material-symbols-outlined">location_on</span>
+            <!-- Left Side: Contact Info -->
+            <div>
+                <h3 class="text-slate-900 dark:text-white text-xl lg:text-3xl font-bold mb-4">Connect With Our Team</h3>
+                <p class="text-slate-600 dark:text-slate-400 text-base lg:text-lg leading-relaxed mb-8">
+                    Whether you're looking to invest, design, or simply explore possibilities, our team is ready to
+                    bring
+                    your vision to life.
+                </p>
+
+                <!-- Contact Details Cards -->
+                <div class="flex flex-col gap-4">
+                    <div
+                        class="flex items-start gap-4 p-4 lg:p-6 rounded-xl bg-white dark:bg-background-dark border border-slate-200 dark:border-primary/10">
+                        <div class="bg-primary/10 p-3 rounded-lg text-primary shrink-0">
+                            <span class="material-symbols-outlined">location_on</span>
+                        </div>
+                        <div>
+                            <h4 class="text-slate-900 dark:text-white font-bold mb-1">Office Locations</h4>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm">Dubai | Abu Dhabi | London</p>
+                        </div>
                     </div>
-                    <div>
-                        <h4 class="text-slate-900 dark:text-white font-bold mb-1">Office Locations</h4>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm">Dubai | Abu Dhabi | London</p>
+
+                    <div
+                        class="flex items-start gap-4 p-4 lg:p-6 rounded-xl bg-white dark:bg-background-dark border border-slate-200 dark:border-primary/10">
+                        <div class="bg-primary/10 p-3 rounded-lg text-primary shrink-0">
+                            <span class="material-symbols-outlined">call</span>
+                        </div>
+                        <div>
+                            <h4 class="text-slate-900 dark:text-white font-bold mb-1">Phone</h4>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm">+971 4 XXX XXXX</p>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm">+971 2 XXX XXXX</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex items-start gap-4 p-4 lg:p-6 rounded-xl bg-white dark:bg-background-dark border border-slate-200 dark:border-primary/10">
+                        <div class="bg-primary/10 p-3 rounded-lg text-primary shrink-0">
+                            <span class="material-symbols-outlined">mail</span>
+                        </div>
+                        <div>
+                            <h4 class="text-slate-900 dark:text-white font-bold mb-1">Email</h4>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm">info@apexdubai.ae</p>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm">projects@apexdubai.ae</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex items-start gap-4 p-4 lg:p-6 rounded-xl bg-white dark:bg-background-dark border border-slate-200 dark:border-primary/10">
+                        <div class="bg-primary/10 p-3 rounded-lg text-primary shrink-0">
+                            <span class="material-symbols-outlined">schedule</span>
+                        </div>
+                        <div>
+                            <h4 class="text-slate-900 dark:text-white font-bold mb-1">Business Hours</h4>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm">Sunday - Thursday: 9:00 AM - 6:00 PM
+                            </p>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm">Friday - Saturday: Closed</p>
+                        </div>
                     </div>
                 </div>
 
-                <div
-                    class="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-background-dark border border-slate-200 dark:border-primary/10">
-                    <div class="bg-primary/10 p-3 rounded-lg text-primary shrink-0">
-                        <span class="material-symbols-outlined">call</span>
-                    </div>
-                    <div>
-                        <h4 class="text-slate-900 dark:text-white font-bold mb-1">Phone</h4>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm">+971 4 XXX XXXX</p>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm">+971 2 XXX XXXX</p>
-                    </div>
-                </div>
-
-                <div
-                    class="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-background-dark border border-slate-200 dark:border-primary/10">
-                    <div class="bg-primary/10 p-3 rounded-lg text-primary shrink-0">
-                        <span class="material-symbols-outlined">mail</span>
-                    </div>
-                    <div>
-                        <h4 class="text-slate-900 dark:text-white font-bold mb-1">Email</h4>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm">info@apexdubai.ae</p>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm">projects@apexdubai.ae</p>
-                    </div>
-                </div>
-
-                <div
-                    class="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-background-dark border border-slate-200 dark:border-primary/10">
-                    <div class="bg-primary/10 p-3 rounded-lg text-primary shrink-0">
-                        <span class="material-symbols-outlined">schedule</span>
-                    </div>
-                    <div>
-                        <h4 class="text-slate-900 dark:text-white font-bold mb-1">Business Hours</h4>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm">Sunday - Thursday: 9:00 AM - 6:00 PM</p>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm">Friday - Saturday: Closed</p>
+                <!-- Social Links -->
+                <div class="mt-12">
+                    <h4 class="text-slate-900 dark:text-white font-bold mb-4">Follow Us</h4>
+                    <div class="flex gap-4">
+                        <button
+                            class="bg-primary/10 text-primary p-3 rounded-lg hover:bg-primary hover:text-white transition-colors">
+                            <span class="material-symbols-outlined">link</span>
+                        </button>
+                        <button
+                            class="bg-primary/10 text-primary p-3 rounded-lg hover:bg-primary hover:text-white transition-colors">
+                            <span class="material-symbols-outlined">photo_camera</span>
+                        </button>
+                        <button
+                            class="bg-primary/10 text-primary p-3 rounded-lg hover:bg-primary hover:text-white transition-colors">
+                            <span class="material-symbols-outlined">tag</span>
+                        </button>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Contact Form -->
-        <div class="px-4 py-6">
-            <h3 class="text-slate-900 dark:text-white text-xl font-bold mb-4">Send Us a Message</h3>
+            <!-- Right Side: Contact Form -->
+            <div
+                class="bg-white dark:bg-white/5 p-6 lg:p-10 rounded-2xl border border-slate-200 dark:border-white/10 shadow-xl">
+                <h3 class="text-slate-900 dark:text-white text-xl lg:text-2xl font-bold mb-6">Send Us a Message</h3>
 
-            <form id="contactForm" class="flex flex-col gap-4">
-                <div class="grid grid-cols-2 gap-3">
-                    <input type="text" placeholder="First Name" required
-                        class="bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-white/40 focus:border-primary focus:outline-none text-sm">
-                    <input type="text" placeholder="Last Name" required
-                        class="bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-white/40 focus:border-primary focus:outline-none text-sm">
-                </div>
+                <form id="contactForm" class="flex flex-col gap-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input type="text" placeholder="First Name" required
+                            class="bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-4 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-white/40 focus:border-primary focus:outline-none text-base transition-colors">
+                        <input type="text" placeholder="Last Name" required
+                            class="bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-4 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-white/40 focus:border-primary focus:outline-none text-base transition-colors">
+                    </div>
 
-                <input type="email" placeholder="Email Address" required
-                    class="bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-white/40 focus:border-primary focus:outline-none text-sm">
+                    <input type="email" placeholder="Email Address" required
+                        class="bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-4 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-white/40 focus:border-primary focus:outline-none text-base transition-colors">
 
-                <input type="tel" placeholder="Phone Number" required
-                    class="bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-white/40 focus:border-primary focus:outline-none text-sm">
+                    <input type="tel" placeholder="Phone Number" required
+                        class="bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-4 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-white/40 focus:border-primary focus:outline-none text-base transition-colors">
 
-                <select required
-                    class="bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:border-primary focus:outline-none text-sm">
-                    <option value="">Select a subject</option>
-                    <option value="general">General Inquiry</option>
-                    <option value="residential">Residential Projects</option>
-                    <option value="commercial">Commercial Projects</option>
-                    <option value="investment">Investment Opportunities</option>
-                    <option value="consultation">Schedule Consultation</option>
-                </select>
+                    <select required
+                        class="bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-4 text-slate-900 dark:text-white focus:border-primary focus:outline-none text-base transition-colors">
+                        <option value="">Select a subject</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="residential">Residential Projects</option>
+                        <option value="commercial">Commercial Projects</option>
+                        <option value="investment">Investment Opportunities</option>
+                        <option value="consultation">Schedule Consultation</option>
+                    </select>
 
-                <textarea placeholder="Your Message" rows="5" required
-                    class="bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-white/40 focus:border-primary focus:outline-none resize-none text-sm"></textarea>
+                    <textarea placeholder="Your Message" rows="5" required
+                        class="bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-4 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-white/40 focus:border-primary focus:outline-none resize-none text-base transition-colors"></textarea>
 
-                <button type="submit"
-                    class="bg-primary text-background-dark font-bold py-4 rounded-lg hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20">
-                    Send Message
-                </button>
-            </form>
-        </div>
-
-        <!-- Social Links -->
-        <div class="px-4 py-6">
-            <h4 class="text-slate-900 dark:text-white font-bold mb-4">Follow Us</h4>
-            <div class="flex gap-4">
-                <button
-                    class="bg-primary/10 text-primary p-3 rounded-lg hover:bg-primary hover:text-white transition-colors">
-                    <span class="material-symbols-outlined">link</span>
-                </button>
-                <button
-                    class="bg-primary/10 text-primary p-3 rounded-lg hover:bg-primary hover:text-white transition-colors">
-                    <span class="material-symbols-outlined">photo_camera</span>
-                </button>
-                <button
-                    class="bg-primary/10 text-primary p-3 rounded-lg hover:bg-primary hover:text-white transition-colors">
-                    <span class="material-symbols-outlined">tag</span>
-                </button>
+                    <button type="submit"
+                        class="bg-primary text-background-dark font-black py-5 rounded-lg hover:bg-primary/90 transition-all active:scale-[0.98] shadow-lg shadow-primary/20 text-lg uppercase tracking-widest mt-2">
+                        Send Message
+                    </button>
+                </form>
             </div>
         </div>
 
         <!-- Footer -->
-        <div class="mt-8 py-8 px-4 border-t border-slate-200 dark:border-primary/10 text-center">
-            <p class="text-slate-500 text-xs">&copy; 2026 APEX Development. All rights reserved.</p>
+        <div
+            class="mt-8 py-12 px-4 border-t border-slate-200 dark:border-primary/10 text-center max-w-7xl mx-auto w-full">
+            <p class="text-slate-500 text-sm tracking-widest uppercase mb-4">Dubai • Abu Dhabi • London</p>
+            <p class="text-slate-600 dark:text-slate-400 text-xs">&copy; 2026 APEX Development. All rights reserved.</p>
         </div>
     </div>
 

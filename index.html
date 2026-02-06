@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>APEX - Premier Development in Dubai</title>
+
+    <!-- Tailwind CSS with plugins -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#cfa117",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#211d11",
+                        "charcoal": "#1a1a1a",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            min-height: 100dvh;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-white">
+
+    <!-- Main Hero Container -->
+    <div class="relative flex h-screen min-h-[700px] w-full flex-col overflow-hidden bg-background-dark">
+
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <div class="h-full w-full bg-cover bg-center"
+                style='background-image: linear-gradient(to bottom, rgba(26, 26, 26, 0.7) 0%, rgba(33, 29, 17, 0.4) 40%, rgba(33, 29, 17, 0.9) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBE_AZx6qlk-abSVj_EhN7bSyU1Vkv7u0wIhi9OJXH7R61VHTuUlkkvvY6psSC9Z9LOC2CH2J6uJ6hB3auVT10X9bNkR8OXIsX6qJ_z9BWr2Y1IFAQcsfRT2qzX86Mttgt2CaoEVtpfgZ18YTLE71ocVxZ0IIpAsUrExtvCs8XscKUyCI5j2o7AymLyo-qqVXLoyod5YT86s73PgiSlYYW2L7m-Pu8BrEgkY-B0QHBzoZWUZ32dWH3MVGbXW0t4ZmDFfHERHJWrHiCe");'>
+            </div>
+        </div>
+
+        <!-- Navigation Bar -->
+        <header class="relative z-20 flex items-center justify-between px-6 pt-16 pb-4 bg-transparent">
+            <div class="flex items-center gap-2">
+                <div class="bg-primary size-8 rounded-full flex items-center justify-center">
+                    <span class="material-symbols-outlined text-background-dark text-xl font-bold">architecture</span>
+                </div>
+                <span class="text-lg font-black tracking-tighter uppercase">Apex</span>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button
+                    class="flex items-center justify-center size-10 rounded-full bg-white/10 backdrop-blur-md hover:bg-white/20 transition-colors">
+                    <span class="material-symbols-outlined text-white">call</span>
+                </button>
+                <button class="flex items-center justify-center size-10" id="menuBtn">
+                    <span class="material-symbols-outlined text-white text-3xl">menu</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Hero Content Section -->
+        <div class="relative z-10 flex flex-1 flex-col items-center justify-end px-6 pb-20 text-center @container">
+            <div class="max-w-[480px] flex flex-col gap-6">
+
+                <!-- Section Badge -->
+                <div class="flex justify-center">
+                    <span
+                        class="px-3 py-1 text-[10px] font-bold tracking-[0.2em] uppercase border border-primary/40 text-primary rounded-full bg-primary/10 backdrop-blur-sm">
+                        Premier Development
+                    </span>
+                </div>
+
+                <!-- Headline -->
+                <h1
+                    class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-6xl drop-shadow-lg">
+                    Building Iconic Spaces for Dubai's Future
+                </h1>
+
+                <!-- Sub-headline -->
+                <p class="text-white/80 text-base font-normal leading-relaxed @[480px]:text-lg max-w-sm mx-auto">
+                    Exquisite craftsmanship meets visionary architecture in the heart of the Emirates.
+                </p>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-col gap-3 mt-4 w-full @[480px]:flex-row @[480px]:justify-center">
+                    <button
+                        class="flex w-full @[480px]:w-auto min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 bg-primary text-background-dark text-base font-bold leading-normal tracking-[0.015em] transition-transform active:scale-95 shadow-xl shadow-primary/20 hover:bg-primary/90"
+                        id="consultationBtn">
+                        <span class="truncate">Request Consultation</span>
+                    </button>
+                    <a href="projects.html"
+                        class="flex w-full @[480px]:w-auto min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 bg-transparent border-2 border-white/30 text-white text-base font-bold leading-normal tracking-[0.015em] transition-transform active:scale-95 backdrop-blur-sm hover:bg-white/10">
+                        <span class="truncate">View Projects</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="relative z-10 flex flex-col items-center pb-8 animate-bounce">
+            <span class="text-[10px] font-bold tracking-[0.2em] text-white/40 uppercase mb-2">Explore</span>
+            <span class="material-symbols-outlined text-primary">keyboard_double_arrow_down</span>
+        </div>
+    </div>
+
+    <!-- Featured Developments Section -->
+    <div class="relative flex flex-col bg-background-light dark:bg-background-dark pt-10 pb-10">
+        <h4 class="text-primary text-sm font-bold uppercase leading-normal tracking-[0.3em] px-4 py-2 text-center">
+            Featured Developments</h4>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 p-4 max-w-6xl mx-auto w-full">
+            <div class="bg-cover bg-center flex flex-col gap-3 rounded-xl justify-end p-4 aspect-[3/4] relative overflow-hidden group shadow-lg cursor-pointer"
+                style='background-image: linear-gradient(0deg, rgba(26, 26, 26, 0.9) 0%, rgba(26, 26, 26, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCzbWk1gSizeoakTs_c34wLornQCWEFGRFrOWZEG0KCmyITaOnJGqwyPNEtdsqH6NvXQsVDxADaz6kx5QeWBwegvzh0QVpuFzGiaIM5fUy8dczy8VumrPHQ5FGCMBD17JTegkwshbB9lll4vpXLfqkdXADXbHwxi1O_-HeG1NiBZ0JyCQdnE1eMjaKPoft1hd8WFxbvdhB_frASlp9vnuVM0iscF0oiPCj4YPCCatOFCssceEQ_lSbQxUoOfSRyrfmdEYddrxd0UVmV");'>
+                <p class="text-white text-sm font-bold leading-tight line-clamp-2">Palm Jumeirah Estate</p>
+                <div
+                    class="flex items-center text-[10px] text-primary font-bold tracking-wider uppercase group-hover:translate-x-1 transition-transform">
+                    <span>View Detail</span>
+                    <span class="material-symbols-outlined text-xs ml-1">arrow_forward</span>
+                </div>
+            </div>
+
+            <div class="bg-cover bg-center flex flex-col gap-3 rounded-xl justify-end p-4 aspect-[3/4] relative overflow-hidden group shadow-lg cursor-pointer"
+                style='background-image: linear-gradient(0deg, rgba(26, 26, 26, 0.9) 0%, rgba(26, 26, 26, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCFItD40-ZnirUgbGZuAlhny9M1NgWO7LK-HioPlQZ_2Fnqc68zYXU5_gwTvvk94K1IiOQT1wNhq8tyNJAfn3a5C2-sW_FtbrOUdY0Hgw6jnPdqdHFZWvJWe7Ta4i64zNhAiNC7m3BMuHi2w0wUigI6eGxqylkl4VfBcz5ANzeHuc_f87hyzNENkLcL06zbvM1QIEG6GDt_y6Puc9ETym8TmyZ2UyMUVZXG8DdzV50E_jJW7gAxw01Fn0ByufeUBBJ7-1t-VIqeu3ek");'>
+                <p class="text-white text-sm font-bold leading-tight line-clamp-2">Downtown Penthouse</p>
+                <div
+                    class="flex items-center text-[10px] text-primary font-bold tracking-wider uppercase group-hover:translate-x-1 transition-transform">
+                    <span>View Detail</span>
+                    <span class="material-symbols-outlined text-xs ml-1">arrow_forward</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Explore Button -->
+        <div class="flex px-4 py-8 justify-center">
+            <a href="projects.html"
+                class="flex min-w-[200px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary/10 border border-primary/30 text-primary text-sm font-bold leading-normal tracking-[0.05em] uppercase hover:bg-primary/20 transition-colors">
+                <span class="truncate">Explore All Projects</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="bg-gradient-to-b from-background-dark to-charcoal py-16 px-4">
+        <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="text-center">
+                <div class="text-primary text-5xl font-black mb-2">1989</div>
+                <div class="text-white/60 text-xs font-bold tracking-widest uppercase">Established</div>
+            </div>
+            <div class="text-center">
+                <div class="text-primary text-5xl font-black mb-2">250+</div>
+                <div class="text-white/60 text-xs font-bold tracking-widest uppercase">Projects</div>
+            </div>
+            <div class="text-center">
+                <div class="text-primary text-5xl font-black mb-2">12</div>
+                <div class="text-white/60 text-xs font-bold tracking-widest uppercase">Signature</div>
+            </div>
+            <div class="text-center">
+                <div class="text-primary text-5xl font-black mb-2">98%</div>
+                <div class="text-white/60 text-xs font-bold tracking-widest uppercase">Satisfaction</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="flex flex-col items-center gap-4 py-12 border-t border-primary/10 bg-background-dark">
+        <div class="flex items-center gap-2 mb-4">
+            <div class="bg-primary size-8 rounded-full flex items-center justify-center">
+                <span class="material-symbols-outlined text-background-dark text-xl font-bold">architecture</span>
+            </div>
+            <span class="text-lg font-black tracking-tighter uppercase">Apex</span>
+        </div>
+
+        <div class="flex gap-6 mb-4">
+            <span
+                class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">public</span>
+            <span
+                class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">mail</span>
+            <span
+                class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">call</span>
+        </div>
+
+        <p class="text-slate-500 text-xs font-medium tracking-widest uppercase">Dubai • Abu Dhabi • London</p>
+
+        <div class="flex flex-wrap justify-center gap-6 mt-4 text-slate-400 text-sm">
+            <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+            <a href="expertise.html" class="hover:text-primary transition-colors">Expertise</a>
+            <a href="projects.html" class="hover:text-primary transition-colors">Projects</a>
+            <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
+        </div>
+
+        <p class="text-slate-600 text-xs mt-6">&copy; 2026 APEX Development. All rights reserved.</p>
+    </footer>
+
+    <!-- Consultation Modal -->
+    <div id="modal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="bg-background-dark border border-primary/20 rounded-2xl max-w-md w-full p-6 relative">
+            <button id="closeModal" class="absolute top-4 right-4 text-white/60 hover:text-white">
+                <span class="material-symbols-outlined text-3xl">close</span>
+            </button>
+
+            <h2 class="text-white text-2xl font-black mb-2">Request Consultation</h2>
+            <p class="text-white/60 text-sm mb-6">Let's discuss your vision for exceptional living</p>
+
+            <form id="consultForm" class="flex flex-col gap-4">
+                <input type="text" placeholder="Full Name" required
+                    class="bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/40 focus:border-primary focus:outline-none">
+                <input type="email" placeholder="Email Address" required
+                    class="bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/40 focus:border-primary focus:outline-none">
+                <input type="tel" placeholder="Phone Number" required
+                    class="bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/40 focus:border-primary focus:outline-none">
+                <select required
+                    class="bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-primary focus:outline-none">
+                    <option value="">Area of Interest</option>
+                    <option value="residential">Residential</option>
+                    <option value="commercial">Commercial</option>
+                    <option value="luxury">Luxury Estates</option>
+                    <option value="investment">Investment</option>
+                </select>
+                <textarea placeholder="Message (Optional)" rows="4"
+                    class="bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/40 focus:border-primary focus:outline-none resize-none"></textarea>
+                <button type="submit"
+                    class="bg-primary text-background-dark font-bold py-3 rounded-lg hover:bg-primary/90 transition-colors">Submit
+                    Request</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Modal functionality
+        const modal = document.getElementById('modal');
+        const consultationBtn = document.getElementById('consultationBtn');
+        const closeModal = document.getElementById('closeModal');
+        const consultForm = document.getElementById('consultForm');
+
+        consultationBtn.addEventListener('click', () => {
+            modal.classList.remove('hidden');
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+            }
+        });
+
+        consultForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you! Your consultation request has been received. We\'ll contact you shortly.');
+            modal.classList.add('hidden');
+            consultForm.reset();
+        });
+
+        // Menu button (demo)
+        document.getElementById('menuBtn').addEventListener('click', () => {
+            alert('Mobile menu - Demo only');
+        });
+    </script>
+</body>
+
+</html>

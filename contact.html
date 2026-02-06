@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Contact - APEX Development</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#cfa117",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#181611",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style>
+        body {
+            min-height: 100dvh;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden pb-24">
+
+        <!-- Top App Bar -->
+        <div
+            class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+            <div class="flex items-center p-4 pb-2 justify-between">
+                <div class="flex size-12 shrink-0 items-center justify-start">
+                    <a href="index.html">
+                        <span class="material-symbols-outlined text-2xl">arrow_back</span>
+                    </a>
+                </div>
+                <h2
+                    class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">
+                    Contact</h2>
+                <div class="flex w-12"></div>
+            </div>
+        </div>
+
+        <!-- Hero Image -->
+        <div class="px-4 py-4">
+            <div class="bg-cover bg-center rounded-xl min-h-[250px] flex items-end p-6 border border-primary/20"
+                style='background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(24,22,17,0.9)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBE_AZx6qlk-abSVj_EhN7bSyU1Vkv7u0wIhi9OJXH7R61VHTuUlkkvvY6psSC9Z9LOC2CH2J6uJ6hB3auVT10X9bNkR8OXIsX6qJ_z9BWr2Y1IFAQcsfRT2qzX86Mttgt2CaoEVtpfgZ18YTLE71ocVxZ0IIpAsUrExtvCs8XscKUyCI5j2o7AymLyo-qqVXLoyod5YT86s73PgiSlYYW2L7m-Pu8BrEgkY-B0QHBzoZWUZ32dWH3MVGbXW0t4ZmDFfHERHJWrHiCe");'>
+                <h1 class="text-white text-3xl font-black">Get In Touch</h1>
+            </div>
+        </div>
+
+        <!-- Contact Info Section -->
+        <div class="px-4 py-4">
+            <h3 class="text-slate-900 dark:text-white text-xl font-bold mb-4">Connect With Our Team</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+                Whether you're looking to invest, design, or simply explore possibilities, our team is ready to bring
+                your vision to life.
+            </p>
+
+            <!-- Contact Details Cards -->
+            <div class="flex flex-col gap-3">
+                <div
+                    class="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-background-dark border border-slate-200 dark:border-primary/10">
+                    <div class="bg-primary/10 p-3 rounded-lg text-primary shrink-0">
+                        <span class="material-symbols-outlined">location_on</span>
+                    </div>
+                    <div>
+                        <h4 class="text-slate-900 dark:text-white font-bold mb-1">Office Locations</h4>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm">Dubai | Abu Dhabi | London</p>
+                    </div>
+                </div>
+
+                <div
+                    class="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-background-dark border border-slate-200 dark:border-primary/10">
+                    <div class="bg-primary/10 p-3 rounded-lg text-primary shrink-0">
+                        <span class="material-symbols-outlined">call</span>
+                    </div>
+                    <div>
+                        <h4 class="text-slate-900 dark:text-white font-bold mb-1">Phone</h4>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm">+971 4 XXX XXXX</p>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm">+971 2 XXX XXXX</p>
+                    </div>
+                </div>
+
+                <div
+                    class="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-background-dark border border-slate-200 dark:border-primary/10">
+                    <div class="bg-primary/10 p-3 rounded-lg text-primary shrink-0">
+                        <span class="material-symbols-outlined">mail</span>
+                    </div>
+                    <div>
+                        <h4 class="text-slate-900 dark:text-white font-bold mb-1">Email</h4>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm">info@apexdubai.ae</p>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm">projects@apexdubai.ae</p>
+                    </div>
+                </div>
+
+                <div
+                    class="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-background-dark border border-slate-200 dark:border-primary/10">
+                    <div class="bg-primary/10 p-3 rounded-lg text-primary shrink-0">
+                        <span class="material-symbols-outlined">schedule</span>
+                    </div>
+                    <div>
+                        <h4 class="text-slate-900 dark:text-white font-bold mb-1">Business Hours</h4>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm">Sunday - Thursday: 9:00 AM - 6:00 PM</p>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm">Friday - Saturday: Closed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="px-4 py-6">
+            <h3 class="text-slate-900 dark:text-white text-xl font-bold mb-4">Send Us a Message</h3>
+
+            <form id="contactForm" class="flex flex-col gap-4">
+                <div class="grid grid-cols-2 gap-3">
+                    <input type="text" placeholder="First Name" required
+                        class="bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-white/40 focus:border-primary focus:outline-none text-sm">
+                    <input type="text" placeholder="Last Name" required
+                        class="bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-white/40 focus:border-primary focus:outline-none text-sm">
+                </div>
+
+                <input type="email" placeholder="Email Address" required
+                    class="bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-white/40 focus:border-primary focus:outline-none text-sm">
+
+                <input type="tel" placeholder="Phone Number" required
+                    class="bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-white/40 focus:border-primary focus:outline-none text-sm">
+
+                <select required
+                    class="bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:border-primary focus:outline-none text-sm">
+                    <option value="">Select a subject</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="residential">Residential Projects</option>
+                    <option value="commercial">Commercial Projects</option>
+                    <option value="investment">Investment Opportunities</option>
+                    <option value="consultation">Schedule Consultation</option>
+                </select>
+
+                <textarea placeholder="Your Message" rows="5" required
+                    class="bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-white/40 focus:border-primary focus:outline-none resize-none text-sm"></textarea>
+
+                <button type="submit"
+                    class="bg-primary text-background-dark font-bold py-4 rounded-lg hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20">
+                    Send Message
+                </button>
+            </form>
+        </div>
+
+        <!-- Social Links -->
+        <div class="px-4 py-6">
+            <h4 class="text-slate-900 dark:text-white font-bold mb-4">Follow Us</h4>
+            <div class="flex gap-4">
+                <button
+                    class="bg-primary/10 text-primary p-3 rounded-lg hover:bg-primary hover:text-white transition-colors">
+                    <span class="material-symbols-outlined">link</span>
+                </button>
+                <button
+                    class="bg-primary/10 text-primary p-3 rounded-lg hover:bg-primary hover:text-white transition-colors">
+                    <span class="material-symbols-outlined">photo_camera</span>
+                </button>
+                <button
+                    class="bg-primary/10 text-primary p-3 rounded-lg hover:bg-primary hover:text-white transition-colors">
+                    <span class="material-symbols-outlined">tag</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="mt-8 py-8 px-4 border-t border-slate-200 dark:border-primary/10 text-center">
+            <p class="text-slate-500 text-xs">&copy; 2026 APEX Development. All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div
+        class="fixed bottom-0 left-0 w-full bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800/50 px-8 pb-8 pt-3 flex justify-between items-center z-50">
+        <a href="index.html" class="flex flex-col items-center gap-1 text-primary">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+            <span class="text-[10px] font-bold">Home</span>
+        </a>
+        <a href="projects.html" class="flex flex-col items-center gap-1 text-slate-400">
+            <span class="material-symbols-outlined">domain</span>
+            <span class="text-[10px] font-bold">Projects</span>
+        </a>
+        <a href="contact.html" class="flex flex-col items-center gap-1 text-slate-400">
+            <span class="material-symbols-outlined">mail</span>
+            <span class="text-[10px] font-bold">Contact</span>
+        </a>
+        <a href="expertise.html" class="flex flex-col items-center gap-1 text-slate-400">
+            <span class="material-symbols-outlined">corporate_fare</span>
+            <span class="text-[10px] font-bold">Services</span>
+        </a>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you! Your message has been sent. We\'ll get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>

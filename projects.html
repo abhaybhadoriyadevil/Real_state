@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Signature Projects - APEX</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#cfa117",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#121110",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100dvh;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white transition-colors duration-300">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden pb-24">
+
+        <!-- Top App Bar -->
+        <div
+            class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+            <div class="flex items-center p-4 pb-2 justify-between">
+                <div class="flex size-12 shrink-0 items-center justify-start">
+                    <a href="index.html">
+                        <span class="material-symbols-outlined text-2xl">arrow_back</span>
+                    </a>
+                </div>
+                <h2
+                    class="text-slate-900 dark:text-white text-sm font-extrabold leading-tight tracking-[0.2em] flex-1 text-center uppercase">
+                    Signature Projects</h2>
+                <div class="flex w-12 items-center justify-end">
+                    <button
+                        class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent gap-2 text-base font-bold leading-normal min-w-0 p-0">
+                        <span class="material-symbols-outlined text-2xl">search</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter Chips -->
+        <div class="flex gap-3 px-4 py-4 overflow-x-auto hide-scrollbar">
+            <div
+                class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-6 cursor-pointer filter-btn active">
+                <p class="text-white text-xs font-bold uppercase tracking-wider">All Projects</p>
+            </div>
+            <div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full border border-slate-200 dark:border-slate-800 bg-transparent px-6 cursor-pointer filter-btn"
+                data-category="skyscrapers">
+                <p class="text-slate-600 dark:text-slate-400 text-xs font-bold uppercase tracking-wider">Skyscrapers</p>
+            </div>
+            <div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full border border-slate-200 dark:border-slate-800 bg-transparent px-6 cursor-pointer filter-btn"
+                data-category="villas">
+                <p class="text-slate-600 dark:text-slate-400 text-xs font-bold uppercase tracking-wider">Luxury Villas
+                </p>
+            </div>
+            <div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full border border-slate-200 dark:border-slate-800 bg-transparent px-6 cursor-pointer filter-btn"
+                data-category="penthouses">
+                <p class="text-slate-600 dark:text-slate-400 text-xs font-bold uppercase tracking-wider">Penthouses</p>
+            </div>
+        </div>
+
+        <!-- Section Header -->
+        <div class="px-4 py-2">
+            <h4 class="text-primary text-[10px] font-black leading-normal tracking-[0.25em] uppercase">Featured
+                Portfolios</h4>
+            <div class="h-[1px] w-8 bg-primary mt-1"></div>
+        </div>
+
+        <!-- Main Project Feed -->
+        <div class="flex flex-col gap-6 p-4">
+
+            <!-- Featured Large Card -->
+            <div class="relative group overflow-hidden rounded-xl aspect-[4/5] bg-slate-200 dark:bg-slate-800 cursor-pointer project-card"
+                data-category="skyscrapers"
+                style='background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.8) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCCrbYvUaEabrqq7yhwlhTRUfS4LvSmg9Jr0ehxHJ2jjfGOOu8OBqU718JQPNw5W2gcYdM-6ugeGlPXIB7eA1z7Qr7aBXZWnUGk-0Ish-JbDZVRM8MmWPlfWrg3WYU7BZZ6eqLqj1VuDRbMXH0YjDxzTFLEk5xepQIuZy4ZYc_kEcB79pi76lxZnK5wClq7UbNcdk64-A-b0cI_zgPpb6WC9qJi6qu5Vm_S3KXlBbH1ZDaHxwIGe1cZ0b175SBUfMet7IXLbFgARLOr"); background-size: cover; background-position: center;'>
+                <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all duration-500"></div>
+                <div class="absolute bottom-0 left-0 p-6 w-full">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span
+                            class="px-2 py-0.5 rounded-sm bg-primary text-[10px] font-bold text-white uppercase tracking-tighter">Iconic</span>
+                    </div>
+                    <h3 class="text-white text-2xl font-light tracking-tight mb-1">The Gilded Spire</h3>
+                    <div class="flex items-center text-slate-300 gap-1">
+                        <span class="material-symbols-outlined text-xs text-primary">location_on</span>
+                        <p class="text-xs font-medium tracking-wide">Downtown Dubai, UAE</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2-Column Grid -->
+            <div class="grid grid-cols-2 gap-4">
+                <div class="flex flex-col gap-3">
+                    <div class="bg-cover bg-center flex flex-col gap-3 rounded-lg justify-end p-4 aspect-[3/4] relative overflow-hidden cursor-pointer project-card"
+                        data-category="villas"
+                        style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBoLvYZUCE8ymiFF0In8ZV8Rsc9470gpIiRPIK1DH5xnDn_ASP2NURbVz5iFjSW41rRZXGAsfQ6AevJf7aTynbupUHfwmWJYGOCA4IS6aKiKs79tsYVOqDNvZ8Gg_55L5ydxK85Gv3cGVsZ7JzKOkpVO__8le4HoaQntzFYsS3EOT7wSXjiORByx1t-BcWwWAtDBSV3PAL4UDD39CsaHR3f_M1B_nA0G82WRyJff09tWSQkNVv84tdKl6duub0Vl7uYfgnZ_oBsvi3L");'>
+                        <p class="text-white text-sm font-bold leading-tight">Palm Jumeirah Villa</p>
+                        <p class="text-white/60 text-[10px] font-medium tracking-widest uppercase">Residential</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-3">
+                    <div class="bg-cover bg-center flex flex-col gap-3 rounded-lg justify-end p-4 aspect-[3/4] relative overflow-hidden cursor-pointer project-card"
+                        data-category="villas"
+                        style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCOfb7OHLrOqgckPxe_o0mJ7yLQTcJRoboNSO3l8uA-__HQfN_jamhVjM_WdN7zlwNABR-nKowOvSAywXdLgad9okB6dKKhlIndcRgXOy2DfFxosjo3SeikW9wUzqSIHT_Hd7rN-Lyz40_0ObanYIOqW0wwRPi2ds5NqTEfH2zW1IfP841tiLovret7gKGH3VHfHcvk5JRxuYFG-Co-PcHKqyVmF9N4QfrbhtDpcFL3mdApkZto92I_rzENlEZmZVE06QIoaxas21I8");'>
+                        <p class="text-white text-sm font-bold leading-tight">Desert Rose Estate</p>
+                        <p class="text-white/60 text-[10px] font-medium tracking-widest uppercase">Estate</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Landscape Card -->
+            <div class="relative group overflow-hidden rounded-xl aspect-video bg-slate-200 dark:bg-slate-800 cursor-pointer project-card"
+                data-category="skyscrapers"
+                style='background-image: linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,0.9) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBWSpgCLejqMQNkUeC1gYMCJO42S4j1nMQTaUgKBUJNlpmk76ASYLdaLSVD-Uxtyo-VbIZBReiESayhnYAJ10uibNN_mPliAids2NBjEW2CrAsvtzRPmpeqDE4214QPDyJa6KTnoP38CiJV74cJZ-28SwT1Uyj5gtwVswimkvTaLNSPjZSdIt7DTQ7d-AdMWoSspiO4t6bQlAV737qeTiZacAkOVd6HybXJn3srBcoY5L5pv94-xfdk-WpI-i-hTjV0dXggAWlxfa5p"); background-size: cover; background-position: center;'>
+                <div class="absolute bottom-0 left-0 p-6 w-full flex justify-between items-end">
+                    <div>
+                        <h3 class="text-white text-lg font-light tracking-tight mb-1">Marina Skyline</h3>
+                        <p class="text-slate-400 text-[10px] font-medium tracking-widest uppercase">High-Rise
+                            Residential</p>
+                    </div>
+                    <div
+                        class="size-10 rounded-full border border-white/20 flex items-center justify-center text-white backdrop-blur-sm">
+                        <span class="material-symbols-outlined text-sm">east</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Projects Grid -->
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-cover bg-center flex flex-col gap-3 rounded-lg justify-end p-4 aspect-[3/4] relative overflow-hidden cursor-pointer project-card"
+                    data-category="penthouses"
+                    style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCFItD40-ZnirUgbGZuAlhny9M1NgWO7LK-HioPlQZ_2Fnqc68zYXU5_gwTvvk94K1IiOQT1wNhq8tyNJAfn3a5C2-sW_FtbrOUdY0Hgw6jnPdqdHFZWvJWe7Ta4i64zNhAiNC7m3BMuHi2w0wUigI6eGxqylkl4VfBcz5ANzeHuc_f87hyzNENkLcL06zbvM1QIEG6GDt_y6Puc9ETym8TmyZ2UyMUVZXG8DdzV50E_jJW7gAxw01Fn0ByufeUBBJ7-1t-VIqeu3ek");'>
+                    <p class="text-white text-sm font-bold leading-tight">Sky Palace Penthouse</p>
+                    <p class="text-white/60 text-[10px] font-medium tracking-widest uppercase">Luxury</p>
+                </div>
+
+                <div class="bg-cover bg-center flex flex-col gap-3 rounded-lg justify-end p-4 aspect-[3/4] relative overflow-hidden cursor-pointer project-card"
+                    data-category="villas"
+                    style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCzbWk1gSizeoakTs_c34wLornQCWEFGRFrOWZEG0KCmyITaOnJGqwyPNEtdsqH6NvXQsVDxADaz6kx5QeWBwegvzh0QVpuFzGiaIM5fUy8dczy8VumrPHQ5FGCMBD17JTegkwshbB9lll4vpXLfqkdXADXbHwxi1O_-HeG1NiBZ0JyCQdnE1eMjaKPoft1hd8WFxbvdhB_frASlp9vnuVM0iscF0oiPCj4YPCCatOFCssceEQ_lSbQxUoOfSRyrfmdEYddrxd0UVmV");'>
+                    <p class="text-white text-sm font-bold leading-tight">Waterfront Sanctuary</p>
+                    <p class="text-white/60 text-[10px] font-medium tracking-widest uppercase">Waterfront</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: Locations -->
+        <div class="mt-4">
+            <h4
+                class="text-slate-400 dark:text-[#b8b29d] text-[10px] font-black leading-normal tracking-[0.3em] px-4 py-4 text-center uppercase">
+                Explore Locations</h4>
+        </div>
+
+        <!-- Location List -->
+        <div class="flex flex-col mb-8">
+            <div
+                class="flex items-center gap-4 px-4 min-h-[72px] py-2 justify-between border-b border-slate-100 dark:border-slate-800/50 cursor-pointer hover:bg-primary/5 transition-colors">
+                <div class="flex items-center gap-4">
+                    <div
+                        class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-12">
+                        <span class="material-symbols-outlined">location_city</span>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <p class="text-slate-900 dark:text-white text-sm font-bold leading-tight">Business Bay</p>
+                        <p class="text-slate-500 dark:text-[#b8b29d] text-xs font-normal leading-normal">12 Signature
+                            Projects</p>
+                    </div>
+                </div>
+                <div class="shrink-0">
+                    <div class="text-slate-400 dark:text-white flex size-7 items-center justify-center">
+                        <span class="material-symbols-outlined text-lg">chevron_right</span>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="flex items-center gap-4 px-4 min-h-[72px] py-2 justify-between border-b border-slate-100 dark:border-slate-800/50 cursor-pointer hover:bg-primary/5 transition-colors">
+                <div class="flex items-center gap-4">
+                    <div
+                        class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-12">
+                        <span class="material-symbols-outlined">waves</span>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <p class="text-slate-900 dark:text-white text-sm font-bold leading-tight">Dubai Marina</p>
+                        <p class="text-slate-500 dark:text-[#b8b29d] text-xs font-normal leading-normal">8 Signature
+                            Projects</p>
+                    </div>
+                </div>
+                <div class="shrink-0">
+                    <div class="text-slate-400 dark:text-white flex size-7 items-center justify-center">
+                        <span class="material-symbols-outlined text-lg">chevron_right</span>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="flex items-center gap-4 px-4 min-h-[72px] py-2 justify-between border-b border-slate-100 dark:border-slate-800/50 cursor-pointer hover:bg-primary/5 transition-colors">
+                <div class="flex items-center gap-4">
+                    <div
+                        class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-12">
+                        <span class="material-symbols-outlined">territory</span>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <p class="text-slate-900 dark:text-white text-sm font-bold leading-tight">Palm Jumeirah</p>
+                        <p class="text-slate-500 dark:text-[#b8b29d] text-xs font-normal leading-normal">15 Signature
+                            Projects</p>
+                    </div>
+                </div>
+                <div class="shrink-0">
+                    <div class="text-slate-400 dark:text-white flex size-7 items-center justify-center">
+                        <span class="material-symbols-outlined text-lg">chevron_right</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div
+        class="fixed bottom-0 left-0 w-full bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800/50 px-8 pb-8 pt-3 flex justify-between items-center z-50">
+        <a href="index.html" class="flex flex-col items-center gap-1 text-primary">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+            <span class="text-[10px] font-bold">Home</span>
+        </a>
+        <a href="projects.html" class="flex flex-col items-center gap-1 text-slate-400">
+            <span class="material-symbols-outlined">domain</span>
+            <span class="text-[10px] font-bold">Projects</span>
+        </a>
+        <a href="contact.html" class="flex flex-col items-center gap-1 text-slate-400">
+            <span class="material-symbols-outlined">mail</span>
+            <span class="text-[10px] font-bold">Contact</span>
+        </a>
+        <a href="expertise.html" class="flex flex-col items-center gap-1 text-slate-400">
+            <span class="material-symbols-outlined">corporate_fare</span>
+            <span class="text-[10px] font-bold">Services</span>
+        </a>
+    </div>
+
+    <script>
+        // Filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                // Remove active from all
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-primary');
+                    b.classList.add('border', 'border-slate-200', 'dark:border-slate-800', 'bg-transparent');
+                    b.querySelector('p').classList.remove('text-white');
+                    b.querySelector('p').classList.add('text-slate-600', 'dark:text-slate-400');
+                });
+
+                // Add active to clicked
+                this.classList.add('bg-primary');
+                this.classList.remove('border', 'border-slate-200', 'dark:border-slate-800', 'bg-transparent');
+                this.querySelector('p').classList.add('text-white');
+                this.querySelector('p').classList.remove('text-slate-600', 'dark:text-slate-400');
+
+                const category = this.dataset.category;
+
+                // Filter projects
+                projectCards.forEach(card => {
+                    if (!category || card.dataset.category === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Project card click
+        projectCards.forEach(card => {
+            card.addEventListener('click', function () {
+                alert('Project Details - Demo only');
+            });
+        });
+    </script>
+</body>
+
+</html>
